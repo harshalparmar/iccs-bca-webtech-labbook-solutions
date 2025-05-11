@@ -1,0 +1,14 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial;
+}
+
+h1 {
+  color: darkblue;
+  text-align: center;
+}
+
+ul li {
+  margin: 10px;
+  font-size: 20px;
+}

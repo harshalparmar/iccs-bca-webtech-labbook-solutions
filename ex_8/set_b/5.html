@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sentence Modifier</title>
+  <script>
+    function modifySentence() {
+      var sentence = document.getElementById("inputText").value;
+
+      var modified = sentence.replace(/ /g, "*");
+
+      modified = modified.replace(/\d/g, "?");
+
+      document.getElementById("output").innerHTML = "Modified Sentence: " + modified;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sentence Modifier</h2>
+  <label for="inputText">Enter a sentence:</label><br />
+  <input type="text" id="inputText" size="50" /><br /><br />
+  <button onclick="modifySentence()">Modify</button>
+  <p id="output"></p>
+</body>
+</html>

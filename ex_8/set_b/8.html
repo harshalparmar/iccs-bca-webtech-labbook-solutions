@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Sum of Odd Digits</title>
+  <script>
+    function sumOddDigits() {
+      var number = document.getElementById("num").value;
+      var sum = 0;
+
+      for (var i = 0; i < number.length; i++) {
+        var digit = parseInt(number[i]);
+        if (!isNaN(digit) && digit % 2 !== 0) {
+          sum += digit;
+        }
+      }
+
+      document.getElementById("result").innerText = "Sum of odd digits: " + sum;
+    }
+  </script>
+</head>
+<body>
+  <h2>Sum of Odd Digits</h2>
+  <label>Enter a number:</label>
+  <input type="text" id="num">
+  <button onclick="sumOddDigits()">Calculate</button>
+  <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Display Date and Time</title>
+</head>
+<body onload="displayDateTime()">
+  <h2>Current Date and Time</h2>
+  <p id="dateTime"></p>
+  <p id="greeting"></p>
+
+  <script>
+    function displayDateTime() {
+      let now = new Date();
+      let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      let day = days[now.getDay()];
+      let date = now.getDate();
+      let month = now.getMonth() + 1;
+      let year = now.getFullYear();
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      let seconds = now.getSeconds();
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      let timeStr = hours + ":" + minutes + ":" + seconds;
+      let fullDateTime = `Today is ${day}, ${date}/${month}/${year} - ${timeStr}`;
+
+      document.getElementById("dateTime").innerText = fullDateTime;
+
+      let greeting = "";
+      if (hours < 12) {
+        greeting = "Good Morning!";
+      } else if (hours < 18) {
+        greeting = "Good Afternoon!";
+      } else {
+        greeting = "Good Evening!";
+      }
+
+      document.getElementById("greeting").innerText = greeting;
+    }
+  </script>
+</body>
+</html>

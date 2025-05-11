@@ -1,0 +1,32 @@
+.fern {
+  font-size: 18px;
+  color: green;
+  font-family: Verdana;
+}
+
+.spore {
+  font-size: 16px;
+  color: brown;
+  font-family: Georgia;
+}
+
+.lilly {
+  font-size: 20px;
+  color: purple;
+  font-style: italic;
+}
+
+.rose {
+  font-size: 18px;
+  color: red;
+}
+
+.red {
+  font-size: 16px;
+  color: crimson;
+}
+
+.pink {
+  font-size: 16px;
+  color: deeppink;
+}

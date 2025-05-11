@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Star Pattern</title>
+</head>
+<body>
+  <h2>Print Star Pattern</h2>
+
+  <label>Enter number of lines (n): </label>
+  <input type="number" id="lines" />
+  <button onclick="printPattern()">Print</button>
+
+  <pre id="pattern"></pre>
+
+  <script>
+    function printPattern() {
+      let n = parseInt(document.getElementById("lines").value);
+      let output = "";
+
+      for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+          output += "* ";
+        }
+        output += "\n";
+      }
+
+      document.getElementById("pattern").textContent = output;
+    }
+  </script>
+</body>
+</html>

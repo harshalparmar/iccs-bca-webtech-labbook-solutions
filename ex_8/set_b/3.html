@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Form Validation</title>
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var pincode = document.getElementById("pincode").value;
+
+      var namePattern = /^[A-Za-z\s]+$/;
+      var pinPattern = /^[0-9]{6}$/;
+
+      if (name.trim() === "" || !namePattern.test(name)) {
+        alert("Please enter a valid name with alphabets only.");
+        return false;
+      }
+
+      if (!pinPattern.test(pincode)) {
+        alert("Please enter a valid 6-digit pin code.");
+        return false;
+      }
+
+      alert("Form Submitted Successfully!");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h2>Form with Validation</h2>
+  <form onsubmit="return validateForm()">
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" /><br /><br />
+
+    <label for="pincode">Pin-Code:</label><br />
+    <input type="text" id="pincode" name="pincode" /><br /><br />
+
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html>

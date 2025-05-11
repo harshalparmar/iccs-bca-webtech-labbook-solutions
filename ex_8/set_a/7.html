@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Character Occurrence Counter</title>
+</head>
+<body>
+  <h2>Count Occurrences of a Character</h2>
+  
+  <label>Enter a string:</label><br>
+  <input type="text" id="mainString"><br><br>
+
+  <label>Enter a character to count:</label><br>
+  <input type="text" id="searchChar" maxlength="1"><br><br>
+
+  <button onclick="countOccurrences()">Count</button>
+  <p id="result"></p>
+
+  <script>
+    function countOccurrences() {
+      let str = document.getElementById("mainString").value;
+      let char = document.getElementById("searchChar").value;
+      let count = 0;
+
+      for (let i = 0; i < str.length; i++) {
+        if (str[i] === char) {
+          count++;
+        }
+      }
+
+      document.getElementById("result").innerText = 
+        "Character '" + char + "' occurred " + count + " time(s).";
+    }
+  </script>
+</body>
+</html>

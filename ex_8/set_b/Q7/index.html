@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>User Login</title>
+  <script>
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username === password) {
+        localStorage.setItem("user", username);
+        window.location.href = "scorecard.html";
+      } else {
+        alert("Login failed. Username and Password must be the same.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>User Login</h2>
+  <label>User Name:</label>
+  <input type="text" id="username"><br><br>
+  <label>Password:</label>
+  <input type="password" id="password"><br><br>
+  <button onclick="login()">Login</button>
+</body>
+</html>

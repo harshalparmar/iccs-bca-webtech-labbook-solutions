@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>Score Card</title>
+  <script>
+    window.onload = function () {
+      var user = localStorage.getItem("user");
+      if (!user) {
+        alert("Unauthorized access!");
+        window.location.href = "login.html";
+      } else {
+        document.getElementById("usernameDisplay").innerText = user;
+      }
+    };
+  </script>
+</head>
+<body>
+  <h2>Welcome, <span id="usernameDisplay"></span>!</h2>
+  <table border="1" cellpadding="10">
+    <tr>
+      <th>Sr. No</th>
+      <th>Subject</th>
+      <th>External (Out of 80)</th>
+      <th>Internal (Out of 20)</th>
+      <th>Total (Out of 100)</th>
+      <th>Result</th>
+    </tr>
+    <tr><td>501</td><td>Core Java</td><td>56</td><td>15</td><td>71</td><td>Pass</td></tr>
+    <tr><td>502</td><td>Web Technology</td><td>67</td><td>13</td><td>80</td><td>Pass</td></tr>
+    <tr><td>503</td><td>.NET</td><td>47</td><td>19</td><td>66</td><td>Pass</td></tr>
+    <tr><td>504</td><td>Object Oriented Software Engineering</td><td>52</td><td>15</td><td>67</td><td>Pass</td></tr>
+    <tr><td>505</td><td>Project</td><td>72</td><td>7</td><td>79</td><td>Pass</td></tr>
+    <tr><td>506</td><td>Practical</td><td>70</td><td>13</td><td>83</td><td>Pass</td></tr>
+  </table>
+</body>
+</html>
